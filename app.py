@@ -15,4 +15,5 @@ def download():
     with YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
     return send_file('video.mp4', as_attachment=True)
-app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run()
